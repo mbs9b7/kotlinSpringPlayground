@@ -3,8 +3,8 @@ package com.mbsobelman.kotlinSpringPlayground.controllers
 import com.mbsobelman.kotlinSpringPlayground.Hello
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
-import java.util.concurrent.atomic.AtomicLong
 import org.springframework.web.bind.annotation.RestController
+import java.util.concurrent.atomic.AtomicLong
 
 
 @RestController
@@ -19,5 +19,4 @@ class HelloController {
     fun hello2(@RequestParam(value = "name") name: String, @RequestParam(value = "greeting") greeting: String): String {
         return "$greeting, $name"
     }
-
 }
