@@ -13,4 +13,11 @@ class HelloController {
 
     @GetMapping("/hello")
     fun hello(@RequestParam(value = "name", defaultValue = "World") name: String) = Hello(counter.incrementAndGet(), "Hello $name")
+
+    //can I add a second one here? yes I can
+    @GetMapping("/hello2")
+    fun hello2(@RequestParam(value = "name") name: String, @RequestParam(value = "greeting") greeting: String): String {
+        return "$greeting, $name"
+    }
+
 }
